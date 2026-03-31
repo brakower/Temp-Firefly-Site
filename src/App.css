@@ -1,6 +1,6 @@
 .page {
   position: relative;
-  padding: 72px clamp(20px, 6vw, 96px) 56px;
+  padding: 120px clamp(20px, 6vw, 96px) 56px;
   max-width: 1180px;
   margin: 0 auto;
   display: flex;
@@ -50,6 +50,22 @@
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
+}
+
+.site-header {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.site-logo {
+  width: min(160px, 28vw);
+  height: auto;
+  filter: drop-shadow(0 14px 22px rgba(22, 26, 29, 0.25));
 }
 
 .hero-banner::before {
@@ -319,6 +335,10 @@
   }
 
   .page {
-    padding-top: 48px;
+    padding-top: 120px;
+  }
+
+  .site-header {
+    inset: 12px 12px auto;
   }
 }

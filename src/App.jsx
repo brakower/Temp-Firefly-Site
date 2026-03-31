@@ -1,4 +1,5 @@
 import './App.css'
+import transparentLogo from './assets/transparent_logo.png'
 
 function App() {
   const services = [
@@ -36,7 +37,12 @@ function App() {
   ]
 
   return (
-    <div className="page">
+    <>
+      <div className="site-header">
+        <img className="site-logo" src={transparentLogo} alt="Firefly Propane logo" />
+        <img className="site-logo" src={transparentLogo} alt="Firefly Propane logo" />
+      </div>
+      <div className="page">
       <header className="hero">
         <div className="hero-banner">
           <span className="pill">We're currently re-making our website. New look, Same friendly crew!</span>
@@ -143,7 +149,8 @@ function App() {
         </p>
         <p className="subtle">Mailing: 980 N Broadway, Thornwood, NY 10594</p>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
 
